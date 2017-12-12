@@ -5,7 +5,7 @@ import re
 #http://space-monkey.ru
 #http://mosigra.ru
 site = requests.get('http://mosigra.ru').text
-pattern = re.compile(r'\w+\.*\w*\.*\w*@\w+\.*\w*\.\w{2,10}')
+pattern = re.compile(r'\w+\.*-*_*\w*\.*-*_*\w*@\w+\.*-*_*\w*\.\w{2,10}')
 emails = list(set(pattern.findall(site)))
 
 
